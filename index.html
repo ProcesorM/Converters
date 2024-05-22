@@ -2,10 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freelo</title>
+    <title>Converters</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script defer src="csvToXlsx.js"></script>
 </head>
 <body>
-    <h1>Mini appka</h1>
+    <h1>Converters</h1>
+    <div class="converters">
+        <div class="converter">
+            <h2>CSV to XLSX</h2>
+            <form id="csvToXlsxForm" enctype="multipart/form-data">
+                <input type="file" id="csvFile" name="csvFile" accept=".csv">
+                <button type="button" id="convertCsvButton">Convert</button>
+            </form>
+        </div>
+        <div class="converter">
+            <h2>HTML to PDF</h2>
+        </div>
+    </div>
 </body>
 </html>

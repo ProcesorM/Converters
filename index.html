@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Converters</title>
@@ -7,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
     <script defer src="csvToXlsx.js"></script>
 </head>
+
 <body>
     <h1>Converters</h1>
     <div class="converters">
@@ -19,7 +21,14 @@
         </div>
         <div class="converter">
             <h2>HTML to PDF</h2>
+            <form id="htmlToPdfForm" enctype="multipart/form-data">
+                <input type="file" id="htmlFile" name="htmlFile" accept=".html">
+                <button id="convertHtmlButton">Convert</button>
+            </form>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.debug.js"></script>
+    <script src="htmlToPdf.js"></script>
 </body>
+
 </html>

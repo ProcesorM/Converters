@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Converters</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
     <script defer src="csvToXlsx.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.debug.js"></script>
+    <script defer src="htmlToPdf.js"></script>
+    <script defer src="txtToPdf.js"></script>
+    <script defer src="pngToJpeg.js"></script>
+    <script defer src="bmpToPng.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg/dist/ffmpeg.min.js"></script>
+    <script defer src="webpToJpeg.js"></script>
 </head>
-
 <body>
     <h1>Converters</h1>
     <div class="converters">
@@ -23,12 +29,37 @@
             <h2>HTML to PDF</h2>
             <form id="htmlToPdfForm" enctype="multipart/form-data">
                 <input type="file" id="htmlFile" name="htmlFile" accept=".html">
-                <button id="convertHtmlButton">Convert</button>
+                <button type="button" id="convertHtmlButton">Convert</button>
+            </form>
+        </div>
+        <div class="converter">
+            <h2>TXT to PDF</h2>
+            <form id="txtToPdfForm" enctype="multipart/form-data">
+                <input type="file" id="txtFile" name="txtFile" accept=".txt">
+                <button type="button" id="convertTxtButton">Convert</button>
+            </form>
+        </div>
+        <div class="converter">
+            <h2>PNG to JPEG</h2>
+            <form id="pngToJpegForm" enctype="multipart/form-data">
+                <input type="file" id="pngFile" name="pngFile" accept=".png">
+                <button type="button" id="convertPngButton">Convert</button>
+            </form>
+        </div>
+        <div class="converter">
+            <h2>BMP to PNG</h2>
+            <form id="bmpToPngForm" enctype="multipart/form-data">
+                <input type="file" id="bmpFile" name="bmpFile" accept=".bmp">
+                <button type="button" id="convertBmpButton">Convert</button>
+            </form>
+        </div>
+        <div class="converter">
+            <h2>WEBP to JPEG</h2>
+            <form id="webpToJpegForm" enctype="multipart/form-data">
+                <input type="file" id="webpFile" name="webpFile" accept=".webp">
+                <button type="button" id="convertWebpButton">Convert</button>
             </form>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.2.61/jspdf.debug.js"></script>
-    <script src="htmlToPdf.js"></script>
 </body>
-
 </html>
